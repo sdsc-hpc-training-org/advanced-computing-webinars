@@ -1,1 +1,1 @@
-# advance-computing-webinars
+# advanced-computing-webinars
