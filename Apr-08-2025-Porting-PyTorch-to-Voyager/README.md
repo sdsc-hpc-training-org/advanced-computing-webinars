@@ -1,4 +1,4 @@
-#Advanced HPC-CI Webinar Series: Porting your AI application to Voyager Gaudi Architecture
+# Advanced HPC-CI Webinar Series: Porting your AI application to Voyager Gaudi Architecture
 ## Tuesday, April 8, 2025
 ## 11:00 AM - 12:30 PM PDT
 ## Remote event
