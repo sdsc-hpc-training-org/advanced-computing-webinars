@@ -1,0 +1,40 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mnist
+spec:
+  restartPolicy: Never
+  volumes:
+    - name: scratch
+      emptyDir: {}
+    - name: workdir
+      hostPath:
+        path: /home/yourusername/webinar_adv_comp_2025
+        type: Directory
+  containers:
+    - name: gaudi-container
+      image: vault.habana.ai/gaudi-docker/1.15.1/ubuntu22.04/habanalabs/pytorch-installer-2.2.0:latest
+      volumeMounts:
+        - mountPath: /scratch
+          name: scratch
+        - mountPath: /workdir
+          name: workdir 
+      resources:
+        limits:
+          memory: 32G
+          cpu: 12
+          habana.ai/gaudi: 1
+          hugepages-2Mi: 95000Mi
+        requests:
+          memory: 32G
+          cpu: 12
+          habana.ai/gaudi: 1
+          hugepages-2Mi: 95000Mi
+      command: ["/bin/sh","-c"]
+      args:
+        - hl-smi;
+          cd /workdir;
+          python run_mnist_onecard.py --epochs 20 --target-accuracy 0.90;
+
+         
+
