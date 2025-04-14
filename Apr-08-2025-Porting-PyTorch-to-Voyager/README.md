@@ -3,6 +3,7 @@
 ## 11:00 AM - 12:30 PM PDT
 ## Remote event
 
+## Summary
 This tutorial will cover how to run a Deep Learning (DL) model, based on the Pytorch framework, on the Voyager supercomputer. Voyager comprises an innovative architecture to optimize DL applications thanks to its Intel Habana Gaudi accelerators. We will discuss Voyager architecture and show how to launch jobs using containers in Kubernetes. Then, we will take a Pytorch application and will port it using Intel Gaudi libraries. We will discuss how to run Jupyter notebooks on Voyager. Finally, we will show how to pull a Hugginface model and run inference on Voyager using Transformers/Diffusers and Optimum-Habana libraries.
 
 ## Instructor
